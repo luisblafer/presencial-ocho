@@ -2,6 +2,8 @@
 
     function mayor($num1, $num2, $num3 = 100)
     {
+        global $funcionesEjecutadas;
+        $funcionesEjecutadas++;
         /*
         Pongo los 3 números en un array para poder recorrerlo con
         un bucle de repetición foreach.
@@ -27,6 +29,8 @@
 
     function tabla($base, $limite = 100)
     {   
+        global $funcionesEjecutadas;
+        $funcionesEjecutadas++;
         /*
         Si $base y $limite son iguales, asigno la $base como único elemento
         del array de salida. Caso contrario, determino el signo del incremento
@@ -38,7 +42,7 @@
             $sgnIncremento = ($limite > $base) ? 1 : -1 ;
             //var_dump($sgnIncremento);
             /*
-            
+
              */
             for ($i=$base; $i <> $limite+$sgnIncremento ; $i+=$sgnIncremento) { 
                 $arraySalida[] = $i;
@@ -48,6 +52,6 @@
     }
 
 
-echo(mayor(-5,0));
+//echo(mayor(-5,0));
 
-var_dump(tabla(-5));
+//var_dump(tabla(-5));
