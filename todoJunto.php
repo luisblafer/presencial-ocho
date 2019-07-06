@@ -3,6 +3,9 @@
     require_once ("funciones.php");
     require_once ("superficie.php");
     
+    /**
+     * Funcion de superficie mayor
+     */
     function superficieMayor($radio1, $radio2, $radio3)
     {
         global $funcionesEjecutadas;
